@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Konrad Pluta&comma; nr albumu&colon; 125152</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="konrad-pluta-nr-albumu-125152">Konrad Pluta, nr albumu: 125152</h1>
+<h3 id="informatyka-ii-stopnia-grupa-lab-2">Informatyka II stopnia, grupa lab. 2</h3>
+<h3 id="instrukcja-laboratoryjna-1">Instrukcja laboratoryjna 1</h3>
+<h2 id="zadanie-1-exec_examplec">Zadanie 1 (<code>exec_example.c</code>)</h2>
+<h3 id="1-czy-potrafisz-wytłumaczyć-dlaczego-nie-zostanie-wypisana-linia-z-komunikatem-i-will-never-be-printed">1. Czy potrafisz wytłumaczyć, dlaczego nie zostanie wypisana linia z komunikatem: „I will never be printed!”?</h3>
+<p>Funkcja z rodziny <code>exec</code> (w tym przypadku <code>execvp</code>) zastępuje bieżący obraz procesu (kod, dane, stertę i stos) nowo uruchamianym programem (<code>wc</code>). Jeśli wywołanie <code>execvp</code> powiedzie się:</p>
+<ul>
+<li>Kod starego programu przestaje istnieć w pamięci tego procesu.</li>
+<li>Sterowanie przechodzi do punktu wejścia nowego programu.</li>
+<li>Instrukcje znajdujące się po wywołaniu <code>execvp</code> nigdy nie zostaną wykonane, chyba że samo wywołanie <code>execvp</code> zakończy się błędem (zwracając <code>-1</code>).</li>
+</ul>
+<h3 id="2-zamień-wywołanie-funkcji-execvp-na-execv-ale-pozostaw-argumenty-bez-zmian-co-się-stało-czy-wiesz-jak-można-sprawić-aby-ta-wersja-programu-działała-tak-jak-poprzednia">2. Zamień wywołanie funkcji <code>execvp</code> na <code>execv</code>, ale pozostaw argumenty bez zmian. Co się stało? Czy wiesz, jak można sprawić, aby ta wersja programu działała tak jak poprzednia?</h3>
+<ul>
+<li><strong>Co się stało:</strong> Program nie wykonał polecenia <code>wc</code>, lecz przeszedł do dalszych instrukcji i wypisał komunikat o błędzie / linii końcowej.</li>
+<li><strong>Dlaczego:</strong> Litera <code>p</code> w nazwie <code>execvp</code> oznacza przeszukiwanie zmiennej środowiskowej <code>PATH</code> w celu odnalezienia pliku wykonywalnego. Funkcja <code>execv</code> nie przeszukuje ścieżek z <code>PATH</code> i oczekuje bezwzględnej (np. <code>/usr/bin/wc</code>) lub względnej ścieżki do pliku wykonywalnego. Przekazanie samego <code>&quot;wc&quot;</code> powoduje błąd <code>ENOENT</code> (<em>No such file or directory</em>).</li>
+<li><strong>Jak naprawić:</strong> Należy podać pełną ścieżkę do programu jako pierwszy argument:<pre><code class="language-c">myargs[<span class="hljs-number">0</span>] = strdup(<span class="hljs-string">&quot;/usr/bin/wc&quot;</span>);
+execv(myargs[<span class="hljs-number">0</span>], myargs);
+</code></pre>
+</li>
+</ul>
+<h2 id="zadanie-2-exec_error_handlingc">Zadanie 2 (<code>exec_error_handling.c</code>)</h2>
+<p>W tym programie wywołanie <code>execv(&quot;wc&quot;, myargs)</code> kończy się niepowodzeniem (kod <code>-1</code>), ponieważ nie podano pełnej ścieżki. Dzięki temu proces nie zostaje podmieniony, a program przechwytuje kod błędu ze zmiennej <code>errno</code>.</p>
+<ul>
+<li>Sprawdzenie <code>errsv == ENOENT</code> pozwala zidentyfikować błąd braku pliku/ścieżki i wypisać stosowny komunikat diagnostyczny.</li>
+</ul>
+<h2 id="zadanie-3-fork_hello_world_no_syncc-oraz-fork_hello_world_syncc">Zadanie 3 (<code>fork_hello_world_no_sync.c</code> oraz <code>fork_hello_world_sync.c</code>)</h2>
+<h3 id="1-jaki-jest-rezultat-działania-programu-bez-synchronizacji-fork_hello_world_no_syncc">1. Jaki jest rezultat działania programu bez synchronizacji (<code>fork_hello_world_no_sync.c</code>)?</h3>
+<p>Proces rodzica wykonuje się szybciej niż proces potomka. Jest to najpewniej spowododwane tym, że rodzic już istnieje w pamięci, ma niezbędne zasoby, natomiast dziecko jest dopiero tworzone w systemie i procesor musi się podjąć jego wykonania. Do tego znak nowej linii od razu wypycha tekst wypisywany przez rodzica.</p>
+<h3 id="2-synchronizacja-fork_hello_world_syncc">2. Synchronizacja (<code>fork_hello_world_sync.c</code>)</h3>
+<p>Aby zagwarantować poprawną kolejność (<code>Hello, World!</code>), proces rodzica musi zaczekać na zakończenie potomka za pomocą funkcji <code>wait(NULL)</code>. Dodatkowo w procesie potomnym warto użyć <code>fflush(stdout)</code>, aby wypchnąć dane z bufora przed zakończeniem:</p>
+<pre><code class="language-c"><span class="hljs-keyword">if</span> (pid == <span class="hljs-number">0</span>) {
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello, &quot;</span>);
+    fflush(<span class="hljs-built_in">stdout</span>);
+} <span class="hljs-keyword">else</span> {
+    wait(<span class="hljs-literal">NULL</span>); <span class="hljs-comment">// oczekiwanie na zakończenie potomka</span>
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;World!\n&quot;</span>);
+}
+</code></pre>
+<h2 id="zadanie-4-fork_variablesc">Zadanie 4 (<code>fork_variables.c</code>)</h2>
+<h3 id="1-jaki-jest-efekt-działania-powyższego-programu">1. Jaki jest efekt działania powyższego programu?</h3>
+<p>Program wypisuje dwa wiersze:</p>
+<pre><code class="language-text">Parent process has variable a = abcbbb
+Child process has variable a = aaadef
+</code></pre>
+<h3 id="2-czy-potrafisz-wyjaśnić-dlaczego-tak-jest">2. Czy potrafisz wyjaśnić dlaczego tak jest?</h3>
+<p>Podczas wywołania <code>fork()</code> system operacyjny tworzy kopię przestrzeni adresowej procesu rodzica dla procesu dziecka:</p>
+<ul>
+<li>Każdy proces posiada <strong>własny, odizolowany segment danych i stos</strong>.</li>
+<li>Zmiana zmiennej lokalnej <code>a</code> oraz globalnej <code>global_array</code> w procesie potomnym (indeksy 0..2 zmienione na <code>'a'</code>) modyfikuje wyłącznie pamięć procesu dziecka.</li>
+<li>Zmiana w procesie rodzica (indeksy 3..5 zmienione na <code>'b'</code>) modyfikuje wyłącznie pamięć procesu rodzica.</li>
+<li>Procesy nie dzielą wspólnej pamięci, dlatego zmiany dokonane w jednym procesie są niewidoczne w drugim.</li>
+</ul>
+<h2 id="zadanie-5-exec_and_forkc">Zadanie 5 (<code>exec_and_fork.c</code>)</h2>
+<h3 id="jaką-kontrolę-posiadamy-nad-procesem-potomnym">Jaką kontrolę posiadamy nad procesem potomnym?</h3>
+<p>Proces rodzicielski posiada szeroką kontrolę nad procesem potomnym:</p>
+<ol>
+<li><strong>Identyfikacja i synchronizacja:</strong> Funkcja <code>fork()</code> zwraca procesowi rodzica identyfikator <code>PID</code> dziecka. Rodzic może oczekiwać na jego zakończenie za pomocą <code>wait(NULL)</code> lub <code>waitpid(pid, &amp;status, options)</code> (także nieblokująco z flagą <code>WNOHANG</code>).</li>
+<li><strong>Odczyt stanu zakończenia:</strong> Poprzez makra (<code>WIFEXITED</code>, <code>WEXITSTATUS</code>, <code>WIFSIGNALED</code>, <code>WTERMSIG</code>) rodzic może sprawdzić, czy dziecko zakończyło się poprawnie, jaki zwróciło kod wyjścia lub jakim sygnałem zostało przerwane.</li>
+<li><strong>Sterowanie sygnałami:</strong> Rodzic może w każdej chwili wysłać sygnał do potomka za pomocą <code>kill(pid, SIG...)</code> (np. <code>SIGSTOP</code> – zatrzymanie, <code>SIGCONT</code> – wznowienie, <code>SIGTERM</code> / <code>SIGKILL</code> – wymuszenie zakończenia).</li>
+<li><strong>Konfiguracja środowiska przed wykonaniem:</strong> Przed wywołaniem <code>exec</code> w procesie potomnym rodzic może skonfigurować deskryptory wejścia/wyjścia (przekierowania potoków), katalog roboczy (<code>chdir</code>), zmienne środowiskowe oraz limity zasobów (<code>setrlimit</code>).</li>
+</ol>
+<h2 id="zadanie-6-pipe_examplec-oraz-python_pipec">Zadanie 6 (<code>pipe_example.c</code> oraz <code>python_pipe.c</code>)</h2>
+<h3 id="1-porównanie-działania-pipe_example-z-poleceniem-w-terminalu-ls--wc">1. Porównanie działania <code>pipe_example</code> z poleceniem w terminalu <code>ls | wc</code>:</h3>
+<p>Wynik działania programu w C oraz polecenia <code>ls | wc</code> jest <strong>dokładnie taki sam</strong>.
+Powłoka (shell) pod maską realizuje potok w identyczny sposób jak program w C:</p>
+<ol>
+<li>Tworzy potok za pomocą wywołania systemowego <code>pipe()</code>.</li>
+<li>Tworzy dwa procesy potomne za pomocą <code>fork()</code>.</li>
+<li>W pierwszym potomku przekierowuje standardowe wyjście <code>stdout</code> na wejście potoku (<code>dup2(p[1], STDOUT_FILENO)</code>) i uruchamia <code>ls</code>.</li>
+<li>W drugim potomku przekierowuje standardowe wejście <code>stdin</code> z wyjścia potoku (<code>dup2(p[0], STDIN_FILENO)</code>) i uruchamia <code>wc</code>.</li>
+<li>Zamyka nieużywane końce potoku i czeka na zakończenie procesów za pomocą <code>wait()</code>.</li>
+</ol>
+<h3 id="2-program-z-procesem-pythona-python_pipec">2. Program z procesem Pythona (<code>python_pipe.c</code>):</h3>
+<p>Program realizuje wymagania:</p>
+<ul>
+<li>Tworzy proces potomny, który wykonuje:<pre><code class="language-bash">python3 -c <span class="hljs-string">&#x27;for i in range(10): print(i)&#x27;</span>
+</code></pre>
+ze standardowym wyjściem przekierowanym do potoku <code>pipe</code>.</li>
+<li>Proces rodzicielski odczytuje surowe dane z potoku do bufora w pętli <code>read()</code>.</li>
+<li>Odczytane liczby są parsowane, a program weryfikuje ich parzystość (<code>num % 2 == 0</code>).</li>
+<li>Na koniec wypisywane jest podsumowanie: łączna liczba odczytanych liczb (10) oraz liczba liczb parzystych (5: 0, 2, 4, 6, 8).</li>
+</ul>
+
+            
+            
+        </body>
+        </html>

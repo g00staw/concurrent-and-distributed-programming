@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Konrad Pluta&comma; nr albumu&colon; 125152</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="konrad-pluta-nr-albumu-125152">Konrad Pluta, nr albumu: 125152</h1>
+<h3 id="informatyka-ii-stopnia-grupa-lab-2">Informatyka II stopnia, grupa lab. 2</h3>
+<h3 id="instrukcja-laboratoryjna-2">Instrukcja laboratoryjna 2</h3>
+<h2 id="zadanie-1-shared_memoryc-shared_memory_waitc-shared_memory_hello_worldc">Zadanie 1 (<code>shared_memory.c</code>, <code>shared_memory_wait.c</code>, <code>shared_memory_hello_world.c</code>)</h2>
+<h3 id="1-usuń-w-procesie-rodzica-instrukcje-wait-i-zapisz-nowy-plik-jako-shared_memory_waitc-jaki-jest-efekt-działania-programu">1. Usuń w procesie rodzica instrukcje wait i zapisz nowy plik jako shared_memory_wait.c. Jaki jest efekt działania programu?</h3>
+<p>Usunięcie <code>wait(NULL)</code> wywołuje wyścig (race condition) i brak synchronizacji:</p>
+<ul>
+<li>Rodzic nie czeka na potomka, czyta pusty bufor, dopisuje <code>bbb</code> i usuwa segment (<code>IPC_RMID</code>).</li>
+<li>Potomek startuje później, zeruje bufor i nadpisuje pamięć ciągiem <code>aaa</code>.</li>
+<li>Kolejność wykonania i zawartość pamięci są niedeterministyczne.</li>
+</ul>
+<p>Wynik z terminala (<code>./shared_memory_wait</code>):</p>
+<pre><code class="language-text">Parent reads 
+Parent append bbb
+
+Child append aaa
+</code></pre>
+<h3 id="2-zmodyfikuj-powyższy-program-aby-na-ekranie-został-wypisany-hello-world-nazwij-plik-shared_memory_hello_worldc">2. Zmodyfikuj powyższy program, aby na ekranie został wypisany Hello World! Nazwij plik shared_memory_hello_world.c</h3>
+<p>Potomek wpisuje do pamięci współdzielonej <code>&quot;Hello&quot;</code>, a rodzic po odczekaniu (<code>wait(NULL)</code>) odczytuje bufor i dopisuje <code>&quot; World!&quot;</code>.</p>
+<p>Wynik z terminala (<code>./shared_memory_hello_world</code>):</p>
+<pre><code class="language-text">Child append Hello
+Parent reads Hello
+Parent append Hello World!
+</code></pre>
+<h2 id="zadanie-2-mmapc">Zadanie 2 (<code>mmap.c</code>)</h2>
+<h3 id="1-jaki-jest-efekt-działania-programu">1. Jaki jest efekt działania programu?</h3>
+<ul>
+<li><strong>Zmienna lokalna <code>a</code>:</strong> nie jest współdzielona. Po <code>fork()</code> każdy proces ma własną kopię pamięci. Potomek zmienia indeksy 0–2 na <code>'a'</code> (<code>aaadef</code>), a rodzic zmienia indeksy 3–5 na <code>'b'</code> (<code>abcbbb</code>) – zmiany się nie przenikają.</li>
+<li><strong>Zmienna <code>shared_variable</code>:</strong> jest współdzielona w pamięci fizycznej dzięki <code>mmap</code>. Rodzic widzi modyfikację potomka (<code>aaa</code>) i dopisuje swoje litery (<code>bbb</code>), uzyskując ostatecznie <code>aaabbb</code>.</li>
+</ul>
+<p>Wynik z terminala (<code>./mmap</code>):</p>
+<pre><code class="language-text">Child process has variable a = aaadef
+Child process has shared variable = aaadef
+Shared variable outside process block = aaadef
+Parent process has variable a = abcbbb
+Parent process has shared variable = aaabbb
+Shared variable outside process block = aaabbb
+</code></pre>
+<h3 id="2-co-dało-użycie-funkcji-mmap">2. Co dało użycie funkcji mmap?</h3>
+<ul>
+<li>Współdzielenie pamięci bezpośrednio w RAM bez tworzenia pliku na dysku (<code>MAP_ANONYMOUS | MAP_SHARED</code>).</li>
+<li>Komunikację bez kopiowania danych przez bufor jądra (zero-copy) i bez wywołań systemowych przy transferze danych.</li>
+<li>Prostsze zarządzanie niż w System V IPC (zwraca wskaźnik, brak konieczności operowania na kluczach/identyfikatorach, zwolnienie przez <code>munmap</code>).</li>
+</ul>
+<h2 id="zadanie-3-python_and_c_mmapc-python_and_c_mmappy">Zadanie 3 (<code>python_and_c_mmap.c</code>, <code>python_and_c_mmap.py</code>)</h2>
+<h3 id="1-czym-różni-się-użycie-mmap-od-sytuacji-w-której-po-prostu-otworzono-by-plik-i-zapisywano-do-niego-dane">1. Czym różni się użycie mmap od sytuacji, w której po prostu otworzono by plik i zapisywano do niego dane?</h3>
+<ul>
+<li><strong>Wydajność (Zero-copy):</strong> operacje bezpośrednio w RAM na wskaźnikach zamiast narzutu wywołań systemowych <code>read</code>/<code>write</code> i kopiowania buforów jądra.</li>
+<li><strong>Komunikacja w czasie rzeczywistym:</strong> modyfikacja pamięci przez Pythona jest natychmiast widoczna w C bez konieczności ciągłego opróżniania buforów (<code>flush</code>) i ponownego odczytu z pozycjonowaniem kursora (<code>seek</code>/<code>read</code>).</li>
+<li><strong>Dostęp swobodny:</strong> plik jest indeksowany bezpośrednio jak zwykła tablica bajtów.</li>
+</ul>
+<p>Wynik z terminala:</p>
+<p>Terminal 1 (<code>python3 python_and_c_mmap.py</code>):</p>
+<pre><code class="language-text">b&#x27;abcdef&#x27;
+b&#x27;abcdef&#x27;
+b&#x27;abcxef&#x27;
+b&#x27;axcxef&#x27;
+b&#x27;axxxef&#x27;
+b&#x27;xxxxef&#x27;
+</code></pre>
+<p>Terminal 2 (<code>./python_and_c_mmap</code>):</p>
+<pre><code class="language-text">a b c d e f 
+a b c x e f 
+a x c x e f 
+a x x x e f 
+x x x x e f 
+x x x x e f 
+</code></pre>
+<h3 id="2-czy-widać-jakieś-ograniczenie-w-powyższym-mechanizmie">2. Czy widać jakieś ograniczenie w powyższym mechanizmie?</h3>
+<ul>
+<li><strong>Brak wbudowanej synchronizacji:</strong> ryzyko wyścigu danych przy jednoczesnym zapisie/odczycie (wymaga zewnętrznych semaforów/blokad).</li>
+<li><strong>Sztywny rozmiar pliku:</strong> <code>mmap</code> nie rozszerza pliku; próba odwołania poza rozmiar kończy się zrzutem pamięci i błędem magistrali (<code>SIGBUS</code>).</li>
+<li><strong>Zgodność formatu:</strong> konieczność ręcznego dbania o zgodność typów binarnych, kolejność bajtów (endianness) i wyrównanie struktur między C a Pythonem.</li>
+<li><strong>Asynchroniczna trwałość:</strong> modyfikacje trafiają do cache stron; zapis na fizyczny dysk wymaga wywołania <code>msync</code>.</li>
+</ul>
+
+            
+            
+        </body>
+        </html>
